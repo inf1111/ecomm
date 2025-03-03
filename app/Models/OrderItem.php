@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderItem extends Model
 {
-    protected $table = "orders";
+    protected $table = "order_items";
     protected $guarded = ['id'];
 
     // Связь с заказом

@@ -21,6 +21,10 @@ class MainController extends Controller
         return view("product", ['product' => $product]);
     }
 
+    public function showCart()
+    {
+        return view('cart');
+    }
 
 }
 

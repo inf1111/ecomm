@@ -12,6 +12,7 @@ Route::get('/test', function () {
 
 Route::get('/', [MainController::class, 'showIndex'])->name('show-index');
 Route::get('/showProduct/{product_id}', [MainController::class, 'showProduct'])->name('show-product');
+Route::get('/cart', [MainController::class, 'showCart'])->name('show-cart');
 
 
 // ЛК
