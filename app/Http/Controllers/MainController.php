@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
@@ -23,7 +25,9 @@ class MainController extends Controller
 
     public function showCart()
     {
-        return view('cart');
+        $order = Order::where(['user_id' => Auth::id(), 'status' => 'filling'])->firstOrFail();
+
+        return view('cart', ['orderItems' => $order->orderItems]);
     }
 
 }
