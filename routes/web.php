@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController;;
 use App\Http\Controllers\MainController;
 use App\Livewire\CartTable;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +24,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::delete('/cart/remove-item', [CartTable::class, 'deleteItem'])->name('cart.remove-item');
     Route::get('/cart', [MainController::class, 'showCart'])->name('show-cart');
+
+    Route::get('/checkout', [MainController::class, 'showCheckout'])->name('show-checkout'); // Страница с формой
+
+    Route::get('/payment/success', [MainController::class, 'showSuccess'])->name('show-success'); // Успешный платеж
+
+    Route::get('/payment/failed', [MainController::class, 'showFailed'])->name('show-failed'); // Ошибка
 });
-
-
 
 

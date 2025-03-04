@@ -94,7 +94,7 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                                    <a href="{{ route("show-checkout") }}"><button class="btn btn-primary btn-lg py-3 btn-block">Proceed To Checkout</button></a>
                                 </div>
                             </div>
                         </div>

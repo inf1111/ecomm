@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
-<div class="card p-4 shadow" style="width: 350px;">
+<div class="wrapper" style="width: 350px;">
     <h3 class="text-center">Привет, {{ auth()->user()->email }}!</h3>
     <p class="text-center">Вы успешно зашли в кабинет.</p>
 
@@ -20,6 +20,32 @@
         @csrf
         <button type="submit" class="btn btn-info w-100">Выход</button>
     </form>
+
+    <br><br>
+
+    <h2>Заказы</h2>
+
+    <table class="table site-block-order-table mb-5">
+        <thead>
+            <th>created_at</th>
+            <th>total_price</th>
+            <th>status</th>
+        </thead>
+        <tbody>
+
+            @foreach($orders as $order)
+
+                <tr>
+                    <td>{{ $order->created_at }}</td>
+                    <td>{{ $order->total_price }}</td>
+                    <td>{{ $order->status }}</td>
+                </tr>
+
+            @endforeach
+
+        </tbody>
+    </table>
+
 </div>
 </body>
 </html>
