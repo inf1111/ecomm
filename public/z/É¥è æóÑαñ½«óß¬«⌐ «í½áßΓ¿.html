@@ -1867,29 +1867,38 @@
 
 
                 <style>
-                    #filelist td:first-child,
-                    #filelist th:first-child {
-                        position: sticky;
-                        left: 0;
-                        background-color: white; /* Фон для лучшего отображения */
-                        z-index: 101; /* Убедитесь, что столбец будет выше остальных элементов */
 
-                    }
 
-                    #filelist th[rowspan="3"] {
-                        z-index: 500
-                    }
-
-                    table.operka th {
+                    #filelist th {
                         outline: 1px solid #6f7172  !important;
                         outline-offset: -1px !important;
                         border: none;
-
                         border-spacing: 0 !important;
-
-
                         background-color: white !important; /* Или ваш цвет */
                     }
+
+                    #filelist thead {
+                        position: sticky;
+                        top: 0; /* Закрепляем thead на верхней части контейнера */
+                        background-color: white; /* Убедитесь, что фон белый */
+                        z-index: 3; /* Ставим выше, чем остальной контент таблицы */
+                    }
+
+                    #filelist tr td:first-child, #filelist th[rowspan="3"] {
+                        position: sticky;
+                        left: 0px;
+                        background-color: white;
+                        z-index: 2; /* Убедитесь, что эта ячейка будет выше, чем другие строки */
+                    }
+
+                    #table-wrapper {
+                        position: relative;
+                        max-height: 750px; /* Высота контейнера */
+                        overflow: auto; /* Добавляем прокрутку для таблицы */
+                        background-color: #fff;
+                        padding: 0px !important;
+                    }
+
 
                 </style>
 
@@ -1898,10 +1907,10 @@
                 <div class="col-12 col-lg-10">
                     <div class="card" id="data_display">
                         <div class="card-body">
-                            <div class="row px-3" style="max-height: 750px; overflow-x: auto; overflow-y: scroll;" id="table-scroll">
+                            <div class="row px-3" style="" id="table-scroll">
 
 
-
+                                <div id="table-wrapper">
                                 <table id="filelist" class="mb-0 shpingalet operka" style="">
                                     <thead class="table-light table-money"
                                            style="position:sticky;z-index:999;top:-1px;background:white;">
@@ -4430,6 +4439,8 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                </div>
+
                             </div>
                         </div>
                     </div>
