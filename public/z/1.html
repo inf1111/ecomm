@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        /* Закрепляем первый столбец */
+        .table-bordered-custom td:first-child,
+        .table-bordered-custom th:first-child {
+            position: sticky;
+            left: 0;
+            background-color: white; /* Фон для лучшего отображения */
+            z-index: 101; /* Убедитесь, что столбец будет выше остальных элементов */
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+        }
+
+        /* Убираем промежутки между ячейками */
+        table {
+            border-spacing: 0; /* Убирает зазоры между ячейками */
+            border-collapse: collapse; /* Убирает дублирование границ */
+        }
+
+        /* Убираем отступы внутри ячеек шапки */
+        .firstRow th {
+            padding: 0; /* Убирает дополнительные отступы */
+        }
+
+        /* Для закрепленного заголовка */
+        .firstRow {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 200; /* Установите z-index для приоритетного отображения */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляет тень для улучшения видимости */
+        }
+    </style>
+</head>
+<body>
+
+<table id="filelist" class="table table-bordered-custom mb-0 shpingalet operka">
+    <thead class="firstRow table-money"
+           style="">
+    <tr>
+        <th rowspan="3" style="min-width:120px; vertical-align:top; z-index: 500">Муниципалитет1</th>
+        <th colspan="24">2024</th>
+    </tr>
+    <tr>
+        <th colspan="12">Октябрь</th>
+        <th colspan="12">Декабрь</th>
+    </tr>
+    <tr>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">
+            Установленный предельный индекс, величина, %
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">
+            Установленный индекс изменения размера вносимой гражданами платы за
+            коммунальные услуги в среднем по субъекту РФ, %
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста максимальный, %, величина
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста максимальный, %, отклонение
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста средний, %, величина
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста средний, %, отклонение
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка БП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка РП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Субсидия БП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка БП
+            максимальная
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка РП
+            максимальная
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Субсидия БП
+            максимальная
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">
+            Установленный предельный индекс, величина, %
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">
+            Установленный индекс изменения размера вносимой гражданами платы за
+            коммунальные услуги в среднем по субъекту РФ, %
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста максимальный, %, величина
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста максимальный, %, отклонение
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста средний, %, величина
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Фактический
+            индекс роста средний, %, отклонение
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка БП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка РП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Субсидия БП
+            средняя
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка БП
+            максимальная
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Выручка РП
+            максимальная
+        </th>
+        <th class="font-little"
+            style="width: 110px; word-wrap:break-word; vertical-align:top;">Субсидия БП
+            максимальная
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="font-piccolo">"Городской округ ""Город Лесной"""</td>
+        <td>9.8</td>
+        <td>9.6</td>
+        <td>9.79</td>
+        <td>0</td>
+        <td>9.59</td>
+        <td>0</td>
+        <td>110784.604</td>
+        <td>126484.202</td>
+        <td>0.000</td>
+        <td>5044.953</td>
+        <td>5785.936</td>
+        <td>0.000</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+    </tr>
+    <tr>
+        <td class="font-piccolo">"Муниципальное образование ""Восточное сельское
+            поселение"""
+        </td>
+        <td>9.8</td>
+        <td>9.6</td>
+        <td>9.78</td>
+        <td>0</td>
+        <td>9.55</td>
+        <td>0</td>
+        <td>1871.651</td>
+        <td>2063.508</td>
+        <td>40.000</td>
+        <td>9186.295</td>
+        <td>10230.693</td>
+        <td>100.000</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+    </tr>
+    <tr>
+        <td class="font-piccolo">"Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+        </td>
+        <td>9.8</td>
+        <td>9.6</td>
+        <td>9.78</td>
+        <td>0</td>
+        <td>9.55</td>
+        <td>0</td>
+        <td>1871.651</td>
+        <td>2063.508</td>
+        <td>40.000</td>
+        <td>9186.295</td>
+        <td>10230.693</td>
+        <td>100.000</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+    </tr>
+    <tr>
+        <td class="font-piccolo">"Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение""""Муниципальное образование ""Восточное сельское
+            поселение"""
+        </td>
+        <td>9.8</td>
+        <td>9.6</td>
+        <td>9.78</td>
+        <td>0</td>
+        <td>9.55</td>
+        <td>0</td>
+        <td>1871.651</td>
+        <td>2063.508</td>
+        <td>40.000</td>
+        <td>9186.295</td>
+        <td>10230.693</td>
+        <td>100.000</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+        <td class="font-piccolo">- Нет данных -</td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>
