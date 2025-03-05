@@ -1863,14 +1863,36 @@
 
                     </div>
                 </div>
+
+
+
+                <style>
+                    #filelist td:first-child,
+                    #filelist th:first-child {
+                        position: sticky;
+                        left: 0;
+                        background-color: white; /* Фон для лучшего отображения */
+                        z-index: 101; /* Убедитесь, что столбец будет выше остальных элементов */
+                        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+                    }
+
+                    #filelist th[rowspan="3"] {
+                        z-index: 500
+                    }
+
+
+                </style>
+
+
+
                 <div class="col-12 col-lg-10">
                     <div class="card" id="data_display">
                         <div class="card-body">
-                            <div class="row px-3" style="max-height: 900px; overflow: scroll;" id="table-scroll">
+                            <div class="row px-3" style="max-height: 750px; overflow-x: auto; overflow-y: scroll;" id="table-scroll">
 
 
 
-                                <table id="filelist" class="mb-0 shpingalet operka">
+                                <table id="filelist" class="mb-0 shpingalet operka" style="">
                                     <thead class="table-light table-money"
                                            style="position:sticky;z-index:999;top:-1px;background:white;">
                                     <tr>
