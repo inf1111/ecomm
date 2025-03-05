@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #mega-wrapper {
+          padding: 10px;
+            background-color:green;
+        }
+
+        #table-wrapper {
+            position: relative;
+            width: 500px; /* Ширина таблицы */
+            height: 300px; /* Высота контейнера */
+            overflow: auto; /* Добавляем прокрутку для таблицы */
+            background-color: #0bb2d3;
+
+        }
+
+        #myTable {
+            border-collapse: collapse; /* Границы между ячейками */
+            border: 1px solid black; /* Граница таблицы */
+            width: 100%; /* Убедитесь, что таблица занимает всю ширину */
+            overflow-x: auto; /* Горизонтальная прокрутка для таблицы */
+            overflow-y: auto; /* Вертикальная прокрутка для таблицы */
+        }
+
+        #myTable th, #myTable td {
+            border: 1px solid black; /* Границы ячеек */
+            padding: 5px; /* Поля ячеек */
+        }
+
+        #myTable th {
+            outline: 1px solid #6f7172  !important;
+            outline-offset: -1px !important;
+            border: none;
+            border-spacing: 0 !important;
+            background-color: white !important; /* Или ваш цвет */
+        }
+
+        thead {
+            position: sticky;
+            top: 0; /* Закрепляем thead на верхней части контейнера */
+            background-color: white; /* Убедитесь, что фон белый */
+            z-index: 3; /* Ставим выше, чем остальной контент таблицы */
+        }
+
+        .left1 {
+            position: sticky;
+            left: 0px;
+            background-color: white;
+            z-index: 2; /* Убедитесь, что эта ячейка будет выше, чем другие строки */
+        }
+
+        #myTable th.left1 {
+            z-index: 4; /* Устанавливаем более высокий z-index для заголовка "Муниципалитет1" */
+        }
+
+    </style>
+</head>
+<body style="margin: 100px">
+
+<div id="mega-wrapper">
+    <div id="table-wrapper">
+        <table id="myTable">
+            <thead>
+            <tr>
+                <th class="left1" rowspan="3">Муниципалитет1</th>
+                <th colspan="3">7777</th>
+                <th colspan="3">7777</th>
+            </tr>
+            <tr>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+            </tr>
+            <tr>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+                <th>7777</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="left1">Городской округ ""Город Лесной"""</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+            </tr>
+            <tr>
+                <td class="left1">Городской округ ""Город Лесной"""</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+            </tr>
+            <tr>
+                <td class="left1">Городской округ ""Город Лесной"""</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+            </tr>
+            <tr>
+                <td  class="left1">Городской округ ""Город Лесной"""</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+                <td>22222222222222222225</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
